@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Airplanes.</title>
+  <link rel="stylesheet" href="./style.css">
+<style type="text/css">
+	
+a {
+    color: var(--c-primary);
+    /* text-decoration: none; */
+    font-weight: var(--f-weight);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.timeline {
+    grid-area: timeline;
+}
+
+.timeline-entry {
+    z-index: 2;
+    background: var(--c-tertiary);
+    backdrop-filter: saturate(180%) blur(40px);
+    -webkit-backdrop-filter: saturate(180%) blur(40px);
+    
+    position: relative;
+    padding: calc(var(--v-space)/2) 0;
+    
+    display: grid;
+    grid-template-columns: 1fr 5fr 5fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    ". co description .";
+}
+
+.timeline-entry:first-child {
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+.timeline-entry:last-child {
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+.timeline-co {
+    margin: calc(var(--v-space) * .5) 0 0;
+    grid-area: co;
+}
+
+.timeline-co a {
+    color: var(--c-primary);
+}
+
+.timeline-time {
+    display: block;
+}
+
+.timeline-description {
+    margin: calc(var(--v-space) * .5) 0 0;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    
+    grid-area: description;
+}
+
+footer {
+    grid-area: footer;
+    
+    display: grid;
+    grid-template-columns: 1fr 5fr 5fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    ". p p ."
+}
+
+footer .footer-content {
+    z-index: 1;
+    padding: var(--v-space) 0;
+    font-weight: var(--f-weight);
+    font-size: 1.5rem;
+    line-height: 1.4;
+    
+    grid-area: p;
+}
+.cta-button {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+
+.button {
+  /* Add your button styling here */
+}
+
+</style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="content">
+	<div class="loading">Loading</div>
+	<div class="trigger"></div>
+	<div class="section">
+		<div class="cta-button">
+  <a href="#" class="button">Download My Resume</a>
+</div>
+		<h1>Hello,<br> I'm Syed Mohd Zair.</h1>
+		<h3>A FullStack Engineer</h3>
+		<p>Transforming Ideas into Seamless Digital Solutions, One Line of Code at a Time.</p>
+		<!-- <div class="phonetic">/ ˈɛərˌpleɪn /</div> -->
+		<div class="scroll-cta">Let's say you want to build an Airplane Ticket Booking System<p style="font-size: 20px;">Scroll Down to see more</p></div>
+	</div>
+	
+	<div class="section right">
+		<h2>From Concept to Cloud: Building a Seamless Airplane Ticket Booking System for Global Travelers.</h2>
+	
+	</div>
+	
+	<div class="ground-container">
+		<div class="parallax ground"></div>
+		<div class="section right">
+			<h2>Step 1. Project Planning</h2>
+			<li>Conducting thorough market research and analysis to identify target audience and competition</li>
+			<li>Defining project scope, objectives, and key deliverables</li> <li> Creating project timeline and allocate resources accordingly</li>
+		</div>
+
+		<div class="section">
+			<h2>Step 2. Requirements Gathering</h2>
+			<li>Conducting interviews and surveys with potential users to understand their needs and pain points</li>
+			<li>Documenting functional and non-functional requirements for the system</li> 
+			<li>Prioritizing features and functionalities based on user feedback and business goals</li>
+		</div>
+		
+		<div class="section right">
+					<h2>Step 3. System Design</h2>
+			<li>Designing a scalable and robust architecture that ensures high performance and reliability</li>
+			<li>Creating wireframes and prototypes to visualize the user interface and user flows</li> 
+			<li>Defining the database structure and establish efficient data management processes</li>
+		</div>
+		<div class="parallax clouds"></div>
+	</div>
+	
+	<div class="blueprint">
+		<svg width="100%" height="100%" viewbox="0 0 100 100">
+			<line id="line-length" x1="10" y1="80" x2="90" y2="80" stroke-width="0.5"></line>
+			<path id="line-wingspan" d="M10 50, L40 35, M60 35 L90 50" stroke-width="0.5"></path>
+			<circle id="circle-phalange" cx="60" cy="60" r="15" fill="transparent" stroke-width="0.5"></circle>
+		</svg>
+		<div class="section dark ">
+			<h2>The facts and figures.</h2>
+			<p>Lets get into the nitty gritty...</p>
+		</div>
+		<div class="section dark length">
+			<h2>Step 4. Backend Development</h2>
+			<li>Implementing the backend using suitable frameworks like, Django, Laravel, Springboot or Express, and a robust database system</li>
+			<li>Developing APIs for flight availability, pricing, and reservation management</li> 
+			<li>Integrating secure payment gateways for seamless transactions</li>
+		</div>
+		<div class="section dark wingspan">
+			<h2>Step 5. Frontend Development</h2>
+			<li>Creating an intuitive and visually appealing user interface using modern web technologies (HTML, CSS, JavaScript)</li>
+			<li>Designing responsive layouts and optimize for various devices and screen sizes</li>
+			<li>Implementing features like flight search, seat selection, and booking confirmation</li>
+		</div>
+		<div class="section dark phalange">
+			<h2>Step 6. Integration with Third-party Services</h2>
+			<li>Integrating with airline APIs for real-time flight availability, schedules, and pricing information</li>
+			<li>Connecting with payment gateways for seamless and secure online transactions</li>
+			<li>Implementing location-based services for destination recommendations and travel information</li>
+		</div>
+		<div class="section dark">
+			<h2>Step 7. Deployment and Maintenance</h2>
+		<li>Deploying the system to a production environment and ensure smooth launch</li>
+		<li>Monitoring system performance, analyze usage patterns, and optimize for scalability</li>
+		<li>Providing ongoing maintenance, updates, and support to address user feedback and implement enhancements</li>
+		</div>
+<!-- 		<div class="section"></div> -->
+	</div>
+	<div class="sunset">
+		<div class="section"></div>
+		<div class="section end">
+			<h2>Conclusion</h2>
+			<h3>This would be my approach to complete a meticulously designed Airplane Ticket Booking System merges robust backend architecture with captivating frontend design, exceeding user expectations for a seamless and secure travel journey.
+</h3>
+<br>
+<br>
+		<h2>I have successfully completed a range of complex projects, some of them are listed below.</h2>
+
+		
+		</div>
+
+
+	</div>
+	</div>
+		<section class="timeline">
+           
+            <article class="timeline-entry">
+                <h1 style="font-size: 50px;margin-top: 20px"class="timeline-co  type-primary"><a href="https://odndigital.com">ODN Digital Services</a> <span class="timeline-time">2020–Present</span></h1 class="timeline-co">
+                <div class="timeline-description">
+                    <p>
+                        Successfully revamping & maintaining e-commerce platforms for <a href="https://www.marksandspencer.com/">Reliance Marks & Spencer India</a> and <a href="https://in.benetton.com/">United Colors of Benetton India</a> using Salesforce Commerce Hub and Lighting Platform Page Designer.
+                    </p>
+                   
+                    <p>
+                        Single-handedly designed and developed <strong> Odnconnect</strong>, a comprehensive online<strong> Workflow Management System </strong>that combined ERP, CRM, POS, and more than 20 modules with automated payments and invoicing for clients, Used Laravel, MySQL, JS, jQuery, and Ajax to deliver an elegant and efficient solution.
+                    </p>
+                    <p>
+                        Designed and developed  <strong> Digital Asset Management tool </strong>, which is a centralized repository for secure storage, retrieval, and sharing of digital assets, increasing productivity and collaboration between client and Organization.
+                    </p>
+                     <p>
+                        Designing & Developing a  <strong> Cataloging Management System </strong>, which have capability of converting raw product data to meet online marketplace standards & turn them to required taxonomy. Saves time, improves data quality, and speeds up time-to-market.
+                    </p>
+                </div>
+            </article>
+            <article class="timeline-entry">
+                <h1 style="font-size: 50px;margin-top: 20px" class="timeline-co type-primary"><a href="#">Advotis Infotech</a> <span class="timeline-time">2018–2019</span></h1 class="timeline-co">
+                <div class="timeline-description">
+                    <p>Designed and developed a <strong> Business Relationship Management </strong> platform that improved customer engagement. The platform helped the company maintain strong relationships with its customers.</p>
+
+                    <p>Developed an automated Monthly <strong>Sales Dashboard and Analytics system </strong>that reduced the time spent on manual data analysis </p>
+
+                    <p>Created a comprehensive web presence for the company, resulting increase in website traffic and increase in customer engagement. The website provided a user-friendly experience for customers and helped establish the company's brand identity in the digital space.</p>
+                </div>
+            </article>
+            <article class="timeline-entry">
+                <h1 style="font-size: 50px;margin-top: 20px" class="timeline-co type-primary"><a href="#">Swap Originators </a><span class="timeline-time">2017–2018</span></h1 class="timeline-co">
+                <div class="timeline-description">
+                	<p>Successfully delivered over <strong>30 web and app projects</strong>, ensuring high standards of quality and timely completion.</p>
+                    <p>Founded and managed a project team to oversee project management and ensure alignment with client scopes of work.</p>
+                    <p>Facilitated communication with vendors to ensure a clear understanding of project requirements and specifications.</p>
+                </div>
+            </article>
+        </section>
+	   <footer>
+            <div class="footer-content">
+
+                <p>You can follow me on <a href="https://instagram.com/iamsmzair?igshid=MzRlODBiNWFlZA==">Instagram</a>, and <a href="https://www.linkedin.com/in/syedzair">LinkedIn</a>. Here’s my <a href="mailto:hey@iamsmzair.com">Email</a> & <a href="tel:+917838563793">Phone.</p>
+            </div>
+        </footer>
+
+<!-- partial -->
+  <!-- <script src='https://codepen.io/ste-vg/pen/zBVaZw.js'></script> -->
+<script src='https://unpkg.com/three@0.117.1/build/three.min.js'></script>
+<script src='https://unpkg.com/three@0.117.1/examples/js/loaders/OBJLoader.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js'></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>
